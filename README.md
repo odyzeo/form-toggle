@@ -95,9 +95,3 @@ or
 ```bash
 yarn serve
 ```
-
-# TODO
-- integrate some mask (v-mask or vue-inputmask or custom) for zip and phone
-- add total maxLength to textarea
-- add maxLength per line to textarea
-- add maxRows to textarea
