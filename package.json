@@ -17,7 +17,7 @@
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
-        "build-lib": "vue-cli-service build --target lib --name form-toggle ./src/plugin/FormItem.js",
+        "build-lib": "vue-cli-service build --target lib --name form-toggle ./src/components/FormToggle.vue",
         "lint": "vue-cli-service lint"
     },
     "repository": {
