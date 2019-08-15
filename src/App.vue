@@ -6,10 +6,7 @@
             <h1 class="text-center">Form toggle</h1>
 
             <h3>Checked: {{ checked }}</h3>
-            <form-toggle
-                v-model="checked"
-                :labels="true"
-            >
+            <form-toggle v-model="checked">
                 <template #checked>
                     on
                 </template>
@@ -17,6 +14,14 @@
                     off
                 </template>
             </form-toggle>
+
+            <h3>Custom dimensions</h3>
+            <form-toggle
+                v-model="checked"
+                :width="100"
+                :height="40"
+                :margin="7"
+            ></form-toggle>
 
             <h3>Disabled</h3>
             <form-toggle

@@ -117,6 +117,11 @@ export default {
             };
         },
     },
+    watch: {
+        value(v) {
+            this.toggled = !!v;
+        },
+    },
     methods: {
         toggle(event) {
             this.toggled = !this.toggled;
