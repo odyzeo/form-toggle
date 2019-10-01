@@ -3,9 +3,9 @@
 @form-toggle-color--disabled: #ccc;
 
 .form-toggle {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     position: relative;
-    vertical-align: middle;
     user-select: none;
     font-size: 10px;
     cursor: pointer;
@@ -13,6 +13,19 @@
     &.is-disabled {
         pointer-events: none;
         opacity: 0.6;
+    }
+}
+
+.form-toggle__icon {
+    color: @form-toggle-color--default;
+    transition: color .3s;
+
+    .form-toggle.is-toggled & {
+        color: @form-toggle-color--checked;
+    }
+
+    .form-toggle.is-disabled & {
+        color: @form-toggle-color--default;
     }
 }
 
