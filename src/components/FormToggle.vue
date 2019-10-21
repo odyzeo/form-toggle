@@ -6,14 +6,7 @@
         }"
         class="form-toggle"
     >
-        <slot name="left">
-            <span
-                v-if="iconLeft"
-                :class="`${icon}`"
-                :style="iconStyle"
-                class="form-toggle__icon"
-            ></span>
-        </slot>
+        <slot #left></slot>
         <input
             :name="name"
             :checked="value"
@@ -31,14 +24,7 @@
                 class="form-toggle__button"
             ></div>
         </div>
-        <slot name="right">
-            <span
-                v-if="iconRight"
-                :class="`${icon}`"
-                :style="iconStyle"
-                class="form-toggle__icon"
-            ></span>
-        </slot>
+        <slot #right></slot>
         <div
             v-if="toggled"
             :style="labelStyle"
@@ -92,22 +78,6 @@ export default {
             type: Number,
             default: 3,
         },
-        icon: {
-            type: String,
-            default: '',
-        },
-        iconSize: {
-            type: Number,
-            default: 12,
-        },
-        iconLeft: {
-            type: Boolean,
-            default: false,
-        },
-        iconRight: {
-            type: Boolean,
-            default: false,
-        },
     },
     data() {
         return {
@@ -146,11 +116,6 @@ export default {
         labelStyle() {
             return {
                 lineHeight: px(this.height),
-            };
-        },
-        iconStyle() {
-            return {
-                fontSize: px(this.iconSize),
             };
         },
     },
