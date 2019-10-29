@@ -6,7 +6,7 @@
         }"
         class="form-toggle"
     >
-        <slot #left></slot>
+        <slot name="left"></slot>
         <input
             :name="name"
             :checked="value"
@@ -24,7 +24,7 @@
                 class="form-toggle__button"
             ></div>
         </div>
-        <slot #right></slot>
+        <slot name="right"></slot>
         <div
             v-if="toggled"
             :style="labelStyle"

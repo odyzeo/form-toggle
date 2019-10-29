@@ -27,6 +27,36 @@
             <form-toggle
                 disabled
             ></form-toggle>
+
+            <h3>Custom context</h3>
+            <form-toggle
+                v-model="checked"
+            >
+                <template #left>
+                    <span v-if="checked">
+                        on
+                    </span>
+                    <span v-else>
+                        off
+                    </span>
+                </template>
+            </form-toggle>
+
+            <h3>Custom icons</h3>
+            <form-toggle
+                v-model="checked"
+            >
+                <template #left>
+                    <span v-if="!checked">
+                        off
+                    </span>
+                </template>
+                <template #right>
+                    <span v-if="checked">
+                        on
+                    </span>
+                </template>
+            </form-toggle>
         </div>
     </div>
 </template>
