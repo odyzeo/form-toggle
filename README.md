@@ -40,7 +40,6 @@ import '@odyzeo/form-toggle/dist/form-toggle.css';
       <form-toggle
         v-model="checked"
       ></form-toggle>
-      
   </div>
 </template>
 ```
@@ -83,6 +82,12 @@ export default {
 | ---    | ---                      |
 | change | Triggered whenever state of the component changes. <br>Contains: <br>`value` - state of the object <br>`srcEvent` - source click event |
 | input  | Input event for v-model |
+
+### Slots
+| Name   | Description                           |
+| ---    | ---                                   |
+| right  | Show custom content on the left side  |
+| left   | Show custom content on the right side |
 
 ## Development
 
