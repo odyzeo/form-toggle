@@ -39,7 +39,14 @@ import '@odyzeo/form-toggle/dist/form-toggle.css';
   <div>
       <form-toggle
         v-model="checked"
-      ></form-toggle>
+      >
+          <template #checked>
+              Yes
+          </template>
+          <template #unchecked>
+              No
+          </template>
+</form-toggle>
   </div>
 </template>
 ```
@@ -84,10 +91,12 @@ export default {
 | input  | Input event for v-model |
 
 ### Slots
-| Name   | Description                           |
-| ---    | ---                                   |
-| right  | Show custom content on the left side  |
-| left   | Show custom content on the right side |
+| Name       | Description                                 |
+| ---        | ---                                         |
+| right      | Show custom content on the left side        |
+| left       | Show custom content on the right side       |
+| checked    | Text displayed inside toggle when checked   |
+| unchecked  | Text displayed inside toggle when unchecked |
 
 ## Development
 
