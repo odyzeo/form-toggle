@@ -8,6 +8,15 @@
     >
         <slot name="left"></slot>
         <input
+            v-if="showFalseInput"
+            :name="name"
+            :value="falseValue"
+            :disabled="disabled"
+            type="hidden"
+            @change.stop="toggle"
+        >
+        <input
+            :value="trueValue"
             :name="name"
             :checked="value"
             :disabled="disabled"
@@ -78,6 +87,14 @@ export default {
             type: Number,
             default: 3,
         },
+        falseValue: {
+            type: [String, Number, Boolean],
+            default: 0,
+        },
+        trueValue: {
+            type: [String, Number, Boolean],
+            default: 1,
+        },
     },
     data() {
         return {
@@ -117,6 +134,9 @@ export default {
             return {
                 lineHeight: px(this.height),
             };
+        },
+        showFalseInput() {
+            return this.falseValue && !this.value;
         },
     },
     watch: {
