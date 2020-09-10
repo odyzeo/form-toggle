@@ -89,11 +89,11 @@ export default {
         },
         falseValue: {
             type: String,
-            default: `0`,
+            default: '0',
         },
         trueValue: {
             type: String,
-            default: `1`,
+            default: '1',
         },
     },
     data() {

@@ -10,14 +10,15 @@
                 @submit.prevent="onFormSubmit"
             >
                 <form-toggle
-                    v-model="checked"
+                    v-model="isSubscribedChecked"
                     name="isSubscribed"
                 ></form-toggle>
                 <br>
                 <form-toggle
                     v-model="isDevilChecked"
                     name="isDevil"
-                    :false-value="null"
+                    true-value="yes"
+                    false-value="no"
                 ></form-toggle>
                 <button>submit</button>
                 <pre v-text="formData"></pre>
@@ -91,16 +92,17 @@ export default {
         return {
             checked: true,
             formData: null,
+            isSubscribedChecked: true,
             isDevilChecked: true,
         };
     },
     methods: {
         onFormSubmit() {
-            this.formData = ''
+            this.formData = '';
             const formData = new FormData(this.$refs.form);
-            for (const pair of formData.entries()) {
+            Array.from(formData).forEach(function (pair) {
                 this.formData += `${pair[0]}: ${pair[1]}\n`;
-            }
+            }, this);
         },
     },
 };

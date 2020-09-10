@@ -72,18 +72,18 @@ export default {
 ## Props
 
 ### input {Object} -  required
-| Property name     | Type                    | Default value | Description |
-| ----------------- | ----------------------- | ------------- | ----------- |
-| `value`           | Boolean                 | false         | Initial state of the toggle button |
-| `name`            | string                  | ``            | Textarea or input `name` attribute |
-| `disabled`        | boolean                 | `false`       | Whether to disable toggle button |
-| `speed`           | Number                  | 300           | Transition time for the animation |
-| `width`           | Number                  | 50            | Width of the button |
-| `height`          | Number                  | 22            | Height of the button |
-| `margin`          | Number                  | 3             | Space between the switch and background border |
-| `name`            | String                  | undefined     | Name to attach to the generated input field |
-| `falseValue`      | String, Number, Boolean | 0             | Value returned by the component if toggle is false |
-| `trueValue`       | String, Number, Boolean | 1             | Value returned by the component if toggle is true |
+| Property name     | Type    | Default value | Description |
+| ----------------- | ------  | ------------- | ----------- |
+| `value`           | Boolea  | false         | Initial state of the toggle button |
+| `name`            | string  | ``            | Textarea or input `name` attribute |
+| `disabled`        | boolea  | `false`       | Whether to disable toggle button |
+| `speed`           | Number  | 300           | Transition time for the animation |
+| `width`           | Number  | 50            | Width of the button |
+| `height`          | Number  | 22            | Height of the button |
+| `margin`          | Number  | 3             | Space between the switch and background border |
+| `name`            | String  | undefined     | Name to attach to the generated input field |
+| `falseValue`      | String  | `0`           | Value returned by the component if toggle is false |
+| `trueValue`       | String  | `1`           | Value returned by the component if toggle is true |
 
 ### Events
 
