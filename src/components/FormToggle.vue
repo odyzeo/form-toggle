@@ -88,12 +88,12 @@ export default {
             default: 3,
         },
         falseValue: {
-            type: [String, Number, Boolean],
-            default: 0,
+            type: String,
+            default: `0`,
         },
         trueValue: {
-            type: [String, Number, Boolean],
-            default: 1,
+            type: String,
+            default: `1`,
         },
     },
     data() {
@@ -136,7 +136,7 @@ export default {
             };
         },
         showFalseInput() {
-            return this.falseValue && !this.value;
+            return this.falseValue != null && !this.value;
         },
     },
     watch: {

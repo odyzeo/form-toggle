@@ -5,6 +5,24 @@
         <div class="container">
             <h1 class="text-center">Form toggle</h1>
 
+            <form
+                ref="form"
+                @submit.prevent="onFormSubmit"
+            >
+                <form-toggle
+                    v-model="checked"
+                    name="isSubscribed"
+                ></form-toggle>
+                <br>
+                <form-toggle
+                    v-model="isDevilChecked"
+                    name="isDevil"
+                    :false-value="null"
+                ></form-toggle>
+                <button>submit</button>
+                <pre v-text="formData"></pre>
+            </form>
+
             <h3>Checked: {{ checked }}</h3>
             <form-toggle v-model="checked">
                 <template #checked>
@@ -72,7 +90,18 @@ export default {
     data() {
         return {
             checked: true,
+            formData: null,
+            isDevilChecked: true,
         };
+    },
+    methods: {
+        onFormSubmit() {
+            this.formData = ''
+            const formData = new FormData(this.$refs.form);
+            for (const pair of formData.entries()) {
+                this.formData += `${pair[0]}: ${pair[1]}\n`;
+            }
+        },
     },
 };
 </script>
