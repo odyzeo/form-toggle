@@ -13,7 +13,6 @@
             :value="falseValue"
             :disabled="disabled"
             type="hidden"
-            @change.stop="toggle"
         >
         <input
             :value="trueValue"
@@ -22,7 +21,7 @@
             :disabled="disabled"
             type="checkbox"
             class="form-toggle__input"
-            @change.stop="toggle"
+            @change="onChange"
         >
         <div
             :style="coreStyle"
@@ -145,8 +144,8 @@ export default {
         },
     },
     methods: {
-        toggle(event) {
-            this.toggled = !this.toggled;
+        onChange(event) {
+            this.toggled = event.target.checked;
             this.$emit('input', this.toggled);
             this.$emit('change', {
                 value: this.toggled,

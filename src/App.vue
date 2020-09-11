@@ -100,7 +100,7 @@ export default {
         onFormSubmit() {
             this.formData = '';
             const formData = new FormData(this.$refs.form);
-            Array.from(formData).forEach(function (pair) {
+            Array.from(formData).forEach(function each(pair) {
                 this.formData += `${pair[0]}: ${pair[1]}\n`;
             }, this);
         },

@@ -82,8 +82,8 @@ export default {
 | `height`          | Number  | 22            | Height of the button |
 | `margin`          | Number  | 3             | Space between the switch and background border |
 | `name`            | String  | undefined     | Name to attach to the generated input field |
-| `falseValue`      | String  | `0`           | Value returned by the component if toggle is false |
-| `trueValue`       | String  | `1`           | Value returned by the component if toggle is true |
+| `falseValue`      | String  | `0`           | Value used in input value when unchecked |
+| `trueValue`       | String  | `1`           | Value used in input value when checked |
 
 ### Events
 
