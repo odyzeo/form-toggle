@@ -8,12 +8,20 @@
     >
         <slot name="left"></slot>
         <input
+            v-if="showFalseInput"
+            :name="name"
+            :value="falseValue"
+            :disabled="disabled"
+            type="hidden"
+        >
+        <input
+            :value="trueValue"
             :name="name"
             :checked="value"
             :disabled="disabled"
             type="checkbox"
             class="form-toggle__input"
-            @change.stop="toggle"
+            @change="onChange"
         >
         <div
             :style="coreStyle"
@@ -78,6 +86,14 @@ export default {
             type: Number,
             default: 3,
         },
+        falseValue: {
+            type: String,
+            default: '0',
+        },
+        trueValue: {
+            type: String,
+            default: '1',
+        },
     },
     data() {
         return {
@@ -118,6 +134,9 @@ export default {
                 lineHeight: px(this.height),
             };
         },
+        showFalseInput() {
+            return this.falseValue != null && !this.value;
+        },
     },
     watch: {
         value(v) {
@@ -125,8 +144,8 @@ export default {
         },
     },
     methods: {
-        toggle(event) {
-            this.toggled = !this.toggled;
+        onChange(event) {
+            this.toggled = event.target.checked;
             this.$emit('input', this.toggled);
             this.$emit('change', {
                 value: this.toggled,
