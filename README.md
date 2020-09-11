@@ -2,7 +2,7 @@
 
 Simple toggle button Vue.js component.
 
-<a href="https://form-toggle-aid071pba.now.sh" target="_blank">Demo</a>
+<a href="https://form-toggle.durmstrangd.vercel.app/" target="_blank">Demo</a>
 
 ## Installation
 
