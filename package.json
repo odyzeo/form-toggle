@@ -1,6 +1,6 @@
 {
     "name": "@odyzeo/form-toggle",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "Odyzeo form toggle component with Vue",
     "main": "dist/form-toggle.umd.js",
     "keywords": [
