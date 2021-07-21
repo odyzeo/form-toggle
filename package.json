@@ -2,47 +2,54 @@
     "name": "@odyzeo/form-toggle",
     "version": "1.2.0",
     "description": "Odyzeo form toggle component with Vue",
-    "main": "dist/form-toggle.umd.js",
+    "main": "dist/form-toggle.common.js",
+    "module": "src/index.js",
+    "source": "src/components/FormToggle.vue",
+    "browser": "dist/form-toggle.umd.min.js",
+    "style": "dist/form-toggle.css",
+    "less": "src/less/form-toggle.less",
+    "files": [
+        "dist/*",
+        "src/*",
+        "package.json"
+    ],
     "keywords": [
         "odyzeo",
         "form",
         "toggle",
         "vue"
     ],
-    "author": "Odyzeo <tomas.zamba@odyzeo.com, peter.baricic@odyzeo.com, svetozar.sadecky@odyzeo.com> (https://odyzeo.com)",
+    "author": "Odyzeo <tomas.zamba@odyzeo.com> (https://odyzeo.com)",
     "publishConfig": {
         "access": "public"
     },
-    "license": "ISC",
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
         "build-lib": "vue-cli-service build --target lib --name form-toggle ./src/components/FormToggle.vue",
         "lint": "vue-cli-service lint"
     },
+    "peerDependencies": {
+        "vue": "^2.6.12"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/odyzeo/form-toggle.git"
     },
-    "files": [
-        "dist/*",
-        "src/*",
-        "public/*",
-        "*.json",
-        ".js"
-    ],
-    "dependencies": {
-        "normalize.css": "^8.0.1",
-        "vue": "^2.6.10"
-    },
     "devDependencies": {
+        "@babel/core": "^7.14.8",
+        "@babel/eslint-parser": "^7.14.7",
+        "@babel/eslint-plugin": "^7.14.5",
         "@vue/cli-plugin-babel": "^3.8.0",
         "@vue/cli-plugin-eslint": "^3.8.0",
         "@vue/cli-service": "^3.8.4",
         "@vue/eslint-config-airbnb": "^4.0.0",
+        "eslint": "^7.31.0",
+        "eslint-plugin-vue": "^7.14.0",
         "less": "^3.9.0",
         "less-loader": "^5.0.0",
-        "vue-template-compiler": "^2.6.10"
+        "normalize.css": "^8.0.1",
+        "vue-template-compiler": "^2.6.12"
     },
     "eslintConfig": {
         "root": true,
@@ -92,16 +99,10 @@
             ]
         },
         "parserOptions": {
-            "parser": "babel-eslint"
-        }
-    },
-    "postcss": {
-        "plugins": {
-            "autoprefixer": {}
+            "parser": "@babel/eslint-parser"
         }
     },
     "browserslist": [
-        "defaults",
-        "> 0.5% in SK"
+        "defaults"
     ]
 }

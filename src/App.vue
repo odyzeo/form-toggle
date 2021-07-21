@@ -1,9 +1,12 @@
 <template>
     <div
         id="app"
-        class="app">
+        class="app"
+    >
         <div class="container">
-            <h1 class="text-center">Form toggle</h1>
+            <h1 class="text-center">
+                Form toggle
+            </h1>
 
             <form
                 ref="form"
