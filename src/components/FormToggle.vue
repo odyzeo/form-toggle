@@ -8,20 +8,20 @@
     >
         <slot name="left"></slot>
         <input
-            v-if="showFalseInput"
-            :name="name"
-            :value="falseValue"
-            :disabled="disabled"
-            type="hidden"
-        >
-        <input
             :value="trueValue"
-            :name="name"
+            :name="showFalseInput ? null : name"
             :checked="value"
             :disabled="disabled"
             type="checkbox"
             class="form-toggle__input"
             @change="onChange"
+        >
+        <input
+            v-if="showFalseInput"
+            :name="name"
+            :value="falseValue"
+            :disabled="disabled"
+            type="hidden"
         >
         <div
             :style="coreStyle"
