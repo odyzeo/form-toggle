@@ -23,30 +23,30 @@
             :disabled="disabled"
             type="hidden"
         >
-        <div
+        <span
             :style="coreStyle"
             class="form-toggle__element"
         >
-            <div
+            <span
                 :style="buttonStyle"
                 class="form-toggle__button"
-            ></div>
-        </div>
+            ></span>
+        </span>
         <slot name="right"></slot>
-        <div
+        <span
             v-if="toggled"
             :style="labelStyle"
             class="form-toggle__label is-left"
         >
             <slot name="checked"></slot>
-        </div>
-        <div
+        </span>
+        <span
             v-else
             :style="labelStyle"
             class="form-toggle__label is-right"
         >
             <slot name="unchecked"></slot>
-        </div>
+        </span>
     </label>
 </template>
 
