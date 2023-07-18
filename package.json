@@ -3,7 +3,7 @@
     "version": "1.2.3",
     "description": "Odyzeo form toggle component with Vue",
     "main": "dist/form-toggle.common.js",
-    "module": "src/index.js",
+    "module": "src/components/FormToggle.vue",
     "source": "src/components/FormToggle.vue",
     "browser": "dist/form-toggle.umd.min.js",
     "style": "dist/form-toggle.css",
